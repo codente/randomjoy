@@ -30,7 +30,7 @@ function getCat() {
   setDog('')
   setFox('')
   setBird('')
-  fetch('http://shibe.online/api/cats?count=1')
+  fetch('https://shibe.online/api/cats?count=1')
     .then(response => response.json())
     .then(data => setCat(data[0]))
 }
@@ -39,7 +39,7 @@ function getBird() {
   setDog('')
   setFox('')
   setCat('')
-  fetch('http://shibe.online/api/birds?count=1')
+  fetch('https://shibe.online/api/birds?count=1')
     .then(response => response.json())
     .then(data => setBird(data[0]))
 }
