@@ -11,6 +11,7 @@ const [ bird, setBird ] = useState(null)
 function getDog() {
   setFox('')
   setCat('')
+  setBird('')
   fetch('https://dog.ceo/api/breeds/image/random')
     .then(response => response.json())
     .then(data => setDog(data.message));
