@@ -27,6 +27,7 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  animation: drop-in 1000ms;
 }
 
 .App-link {
@@ -41,11 +42,21 @@ button {
   font-size: inherit;
 }
 
-@keyframes App-logo-spin {
+@keyframes drop-in {
   from {
-    transform: rotate(0deg);
+    transform:
+      rotate(-30deg) translateY(-100%);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    transform:
+      rotate(0deg) translateY(0%);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1068px) {
+  .App img {
+    max-width: 100%;
   }
 }
